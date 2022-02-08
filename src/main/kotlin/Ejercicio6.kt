@@ -1,0 +1,15 @@
+fun main(args: Array<String>){
+    println("El tiempo que tarda en caer un objeto desde la altura: ")
+    var altura=comprobarNumero()// uso la misma función que la del ejercicio 5
+
+    while(altura<=0) {
+        println("No es posible un valor negativo o 0 para que haya caída.")
+        altura=comprobarNumero()
+    }
+    println("${calcularCaida(altura)} segundos.")
+}
+fun calcularCaida(altura:Double):Double{
+    var caida=Math.sqrt((2*altura)/9.81)
+    return Math.round(caida*100)/100.00
+}
+
