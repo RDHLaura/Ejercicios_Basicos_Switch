@@ -13,7 +13,7 @@ fun main(args: Array<String>){
         var opcion:Int?=0
         do {
             opcion = readLine()?.toIntOrNull()
-        }while(opcion==null)
+        }while(opcion==null && opcion !in (1..3))
         when(opcion){
             1-> {
                 var nota=-1.0
@@ -23,17 +23,18 @@ fun main(args: Array<String>){
                 }
                 notas.add(nota)
             }
-            2->println("La media de los examenes: $notas es: ${calcularMedia(notas)}.")
+            2->println("La media de los examenes: $notas es: ${calcularMedia(notas)}. ${imprimirNotaFinal(calcularMedia(notas))}")
             3->break
         }
     }
 }
-fun imprimirNotaFinal(media:Int){
+fun imprimirNotaFinal(media:Int):String{
     when (media){
-        in 0..4 -> println("Suspenso")
-        in 5..6 -> println("Aprobado")
-        in 7..8 -> println("Notable")
-        in 9..10 -> println("Sobresaliente")
+        in 0..4 -> return "Suspenso"
+        in 5..6 -> return "Aprobado"
+        in 7..8 -> return "Notable"
+        in 9..10 -> return "Sobresaliente"
+        else -> return ""
     }
 }
 

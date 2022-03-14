@@ -1,4 +1,4 @@
-//TODO Hacer el ejercicio 9, reusar el 5
+
 
 fun main(args: Array<String>){
     println("Para una ecuación de primer grado del tipo 'ax+b=c")
@@ -22,4 +22,4 @@ fun ecuacion2grado(a:Double,b:Double, c:Double):Double{
     }
     return x}
 
-//fun comprobarNumero() del ejercicio 5
+

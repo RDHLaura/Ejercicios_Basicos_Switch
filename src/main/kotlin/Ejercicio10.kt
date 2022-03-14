@@ -14,20 +14,18 @@ Acuario	21 de enero – 18 de febrero
 Piscis	19 de febrero – 20 de marzo
      */
 
-    println("Indica tu día de nacimiento: ")
+    println("Día de nacimiento: ")
     var dia:Int
     do {
         dia = checkInt()
     }while (dia>31)
-    println("Indica tu mes de nacimiento: ")
+    println("Mes de nacimiento: ")
     var mes:Int
     do {
         mes = checkInt()
     }while(mes>12)
     var horoscopo= tusigno(dia, mes)
     println("Tu horóscopo es: $horoscopo")
-
-
 }
 
 

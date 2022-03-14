@@ -8,13 +8,13 @@ fun main(args:Array<String>){
     println(lista.toString())
 }
 fun pedirNume():Int{
-    var hora:Int
+    var num:Int
     while(true)
     {
         try{
-            hora= readln().toInt()
+            num= readln().toInt()
             break
         }catch (e:Exception){println("Introduzca un valor numerico. Ej: 10")}
     }
-    return hora
+    return num
 }
